@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://wxkkbod6018q"]
+[gd_scene format=3 uid="uid://wxkkbod6018q"]
 
 [ext_resource type="Texture2D" uid="uid://vk5vyae4yroi" path="res://resources/imported_resources/hardw_cpu-sheet0.png" id="1_4v2a2"]
-[ext_resource type="Script" uid="uid://cys2ow3ogbgwq" path="res://scripts/gameplay/new_hardware/select_hardware_button.gd" id="1_cm1kh"]
+[ext_resource type="Script" uid="uid://cys2ow3ogbgwq" path="res://scripts/select_hardware_button.gd" id="1_cm1kh"]
 [ext_resource type="Texture2D" uid="uid://balnynnewqbc8" path="res://resources/imported_resources/hardw_cpu-sheet1.png" id="2_cm1kh"]
 [ext_resource type="FontFile" uid="uid://bqtj7evfr2o24" path="res://resources/font/lato-regular-webfont.ttf" id="3_v5ai3"]
 [ext_resource type="FontFile" uid="uid://ces8cy0k1egmf" path="res://resources/font/lato-bold-webfont.ttf" id="5_v5ai3"]

@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4kmsubsf48aa"]
+[gd_scene format=3 uid="uid://b4kmsubsf48aa"]
 
 [ext_resource type="FontFile" uid="uid://ces8cy0k1egmf" path="res://resources/font/lato-bold-webfont.ttf" id="1_wfmvs"]
-[ext_resource type="Script" uid="uid://bsm2an2olnyw5" path="res://scripts/gameplay/dropdown_button.gd" id="2_w3jdf"]
+[ext_resource type="Script" uid="uid://bsm2an2olnyw5" path="res://scripts/dropdown_button.gd" id="2_w3jdf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mesn4"]
 content_margin_left = 5.0

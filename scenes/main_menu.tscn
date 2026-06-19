@@ -1,10 +1,10 @@
-[gd_scene load_steps=41 format=3 uid="uid://djpgwfhqbxfi2"]
+[gd_scene format=3 uid="uid://djpgwfhqbxfi2"]
 
-[ext_resource type="Script" uid="uid://dd8sttdr1qfj5" path="res://scripts/main_menu/main_menu.gd" id="1_1ajci"]
-[ext_resource type="Script" uid="uid://s7kmnaooblod" path="res://scripts/main_menu/texture_rect/texture_rect_mouse_offset.gd" id="2_1ajci"]
+[ext_resource type="Script" uid="uid://dd8sttdr1qfj5" path="res://scripts/main_menu.gd" id="1_1ajci"]
+[ext_resource type="Script" uid="uid://s7kmnaooblod" path="res://scripts/texture_rect_mouse_offset.gd" id="2_1ajci"]
 [ext_resource type="Texture2D" uid="uid://c6428d1g4k4sy" path="res://resources/imported_resources/mm_cpu-sheet0.png" id="2_7b55j"]
 [ext_resource type="Theme" uid="uid://cw13xaerpch24" path="res://resources/theme/general.theme" id="2_e16di"]
-[ext_resource type="Script" uid="uid://ch71y4wslechh" path="res://scripts/main_menu/texture_rect/texture_rect_rotate.gd" id="3_5pajh"]
+[ext_resource type="Script" uid="uid://ch71y4wslechh" path="res://scripts/texture_rect_rotate.gd" id="3_5pajh"]
 [ext_resource type="Texture2D" uid="uid://18jv701vii4t" path="res://resources/imported_resources/mm_garage-sheet0.png" id="3_7phob"]
 [ext_resource type="FontFile" uid="uid://bqtj7evfr2o24" path="res://resources/font/lato-regular-webfont.ttf" id="4_j7ex8"]
 [ext_resource type="FontFile" uid="uid://ces8cy0k1egmf" path="res://resources/font/lato-bold-webfont.ttf" id="6_m8ng4"]
@@ -12,10 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://bn34o80wt3ove" path="res://resources/imported_resources/mm_fullscreen-sheet0.png" id="10_oy37t"]
 [ext_resource type="Texture2D" uid="uid://ddog4r01p5db0" path="res://resources/imported_resources/mm_fullscreen-sheet1.png" id="11_1ajci"]
 [ext_resource type="FontFile" uid="uid://dn6eeashribl" path="res://resources/font/lato-light-webfont.ttf" id="12_7b55j"]
-[ext_resource type="Script" uid="uid://bp3ywn6lkwonb" path="res://scripts/main_menu/new_game_menu.gd" id="12_j7ex8"]
+[ext_resource type="Script" uid="uid://bp3ywn6lkwonb" path="res://scripts/new_game_menu.gd" id="12_j7ex8"]
 [ext_resource type="Texture2D" uid="uid://ddsqpl7sxx6du" path="res://resources/imported_resources/creation_settings-sheet0.png" id="14_a8gd2"]
-[ext_resource type="Script" uid="uid://bp2tmvajxrgny" path="res://scripts/main_menu/settings_menu.gd" id="15_5pajh"]
-[ext_resource type="Script" uid="uid://beyckbtod0b41" path="res://scripts/main_menu/about_menu.gd" id="16_5pajh"]
+[ext_resource type="Script" uid="uid://bp2tmvajxrgny" path="res://scripts/settings_menu.gd" id="15_5pajh"]
+[ext_resource type="Script" uid="uid://beyckbtod0b41" path="res://scripts/about_menu.gd" id="16_5pajh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5pajh"]
 
@@ -227,7 +227,7 @@ Button/styles/pressed = SubResource("StyleBoxFlat_6h3lr")
 CheckButton/icons/checked = null
 CheckButton/icons/unchecked = null
 
-[node name="MainMenu" type="MarginContainer"]
+[node name="MainMenu" type="MarginContainer" unique_id=207535774]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -235,11 +235,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1ajci")
 
-[node name="BackgroundColorRect" type="ColorRect" parent="."]
+[node name="BackgroundColorRect" type="ColorRect" parent="." unique_id=1652343959]
 layout_mode = 2
 color = Color(0.392157, 0.709804, 0.964706, 1)
 
-[node name="GarageMarginContainer" type="MarginContainer" parent="BackgroundColorRect"]
+[node name="GarageMarginContainer" type="MarginContainer" parent="BackgroundColorRect" unique_id=400737100]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -250,10 +250,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 350
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/GarageMarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/GarageMarginContainer" unique_id=1680590293]
 layout_mode = 2
 
-[node name="GarageTextureRect" type="TextureRect" parent="BackgroundColorRect/GarageMarginContainer/MarginContainer"]
+[node name="GarageTextureRect" type="TextureRect" parent="BackgroundColorRect/GarageMarginContainer/MarginContainer" unique_id=835687342]
 custom_minimum_size = Vector2(265, 265)
 layout_mode = 2
 texture = ExtResource("3_7phob")
@@ -261,7 +261,7 @@ expand_mode = 3
 stretch_mode = 5
 script = ExtResource("2_1ajci")
 
-[node name="MainMenuMarginContainer" type="MarginContainer" parent="BackgroundColorRect"]
+[node name="MainMenuMarginContainer" type="MarginContainer" parent="BackgroundColorRect" unique_id=415802936]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -270,33 +270,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer"]
+[node name="TitleMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer" unique_id=581802749]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/margin_top = 15
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer" unique_id=883348369]
 layout_mode = 2
 
-[node name="IconMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer"]
+[node name="IconMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer" unique_id=1070946861]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/margin_top = 15
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/IconMarginContainer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/IconMarginContainer" unique_id=1666739318]
 layout_mode = 2
 
-[node name="CPU" type="TextureRect" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/IconMarginContainer/AspectRatioContainer"]
+[node name="CPU" type="TextureRect" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/IconMarginContainer/AspectRatioContainer" unique_id=498274259]
 layout_mode = 2
 texture = ExtResource("2_7b55j")
 script = ExtResource("3_5pajh")
 
-[node name="LabelMarginContainer2" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer"]
+[node name="LabelMarginContainer2" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer" unique_id=2052887889]
 layout_mode = 2
 theme_override_constants/margin_left = 25
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/LabelMarginContainer2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/MainMenuMarginContainer/TitleMarginContainer/BoxContainer/LabelMarginContainer2" unique_id=778986525]
 custom_minimum_size = Vector2(424, 0)
 layout_mode = 2
 theme_override_constants/line_separation = -20
@@ -311,45 +311,45 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="InfoMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer"]
+[node name="InfoMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer" unique_id=2022880611]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_bottom = 7
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer" unique_id=1361706059]
 layout_mode = 2
 vertical = true
 
-[node name="VersionLabel" type="Label" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer/BoxContainer"]
+[node name="VersionLabel" type="Label" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer/BoxContainer" unique_id=2039973100]
 layout_mode = 2
 text = "Dev branch"
 label_settings = ExtResource("7_tl45y")
 
-[node name="BugLabel" type="Label" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer/BoxContainer"]
+[node name="BugLabel" type="Label" parent="BackgroundColorRect/MainMenuMarginContainer/InfoMarginContainer/BoxContainer" unique_id=1471476416]
 layout_mode = 2
 text = "In early development, report all bugs to the GitHub repository."
 label_settings = ExtResource("7_tl45y")
 horizontal_alignment = 1
 
-[node name="MenuMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer"]
+[node name="MenuMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer" unique_id=213625663]
 layout_mode = 2
 theme_override_constants/margin_top = 150
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer" unique_id=1827302386]
 layout_mode = 2
 theme_override_constants/separation = 20
 vertical = true
 
-[node name="NewGameButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer"]
+[node name="NewGameButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer" unique_id=1174611249]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("2_e16di")
 text = "New Game"
 
-[node name="LoadGameButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer"]
+[node name="LoadGameButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer" unique_id=1945594914]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 focus_mode = 0
@@ -357,30 +357,30 @@ theme = ExtResource("2_e16di")
 disabled = true
 text = "Load"
 
-[node name="SettingsButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer"]
+[node name="SettingsButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer" unique_id=1172283494]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("2_e16di")
 text = "Settings"
 
-[node name="AboutButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer"]
+[node name="AboutButton" type="Button" parent="BackgroundColorRect/MainMenuMarginContainer/MenuMarginContainer/BoxContainer" unique_id=1779120538]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 focus_mode = 0
 theme = ExtResource("2_e16di")
 text = "About"
 
-[node name="ButtonMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer"]
+[node name="ButtonMarginContainer" type="MarginContainer" parent="BackgroundColorRect/MainMenuMarginContainer" unique_id=760685991]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/ButtonMarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/MainMenuMarginContainer/ButtonMarginContainer" unique_id=1529186188]
 layout_mode = 2
 
-[node name="FullscreenButton" type="TextureButton" parent="BackgroundColorRect/MainMenuMarginContainer/ButtonMarginContainer/BoxContainer"]
+[node name="FullscreenButton" type="TextureButton" parent="BackgroundColorRect/MainMenuMarginContainer/ButtonMarginContainer/BoxContainer" unique_id=905738954]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
@@ -390,7 +390,7 @@ texture_normal = ExtResource("10_oy37t")
 texture_pressed = ExtResource("11_1ajci")
 stretch_mode = 0
 
-[node name="NewGameMarginContainer" type="MarginContainer" parent="BackgroundColorRect"]
+[node name="NewGameMarginContainer" type="MarginContainer" parent="BackgroundColorRect" unique_id=1560071287]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -401,33 +401,33 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_j7ex8")
 
-[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer"]
+[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer" unique_id=10010643]
 layout_mode = 2
 color = Color(0, 0, 0, 0.5)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer" unique_id=1125577090]
 layout_mode = 2
 theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 30
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer" unique_id=1859977670]
 layout_mode = 2
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer" unique_id=1130212452]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 vertical = true
 
-[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=362474075]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 color = Color(0.392157, 0.709804, 0.964706, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect" unique_id=964154023]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -436,7 +436,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 15
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer" unique_id=1121979454]
 custom_minimum_size = Vector2(424, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_j7ex8")
@@ -450,11 +450,11 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=990919625]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect"]
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect" unique_id=659911517]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -462,7 +462,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer" unique_id=852102587]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -470,46 +470,46 @@ theme_override_constants/margin_left = 70
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 70
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer" unique_id=1553042137]
 layout_mode = 2
 vertical = true
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer" unique_id=440068347]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 40
 alignment = 1
 
-[node name="NameBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer"]
+[node name="NameBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer" unique_id=2067649953]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 40
 alignment = 1
 vertical = true
 
-[node name="CompanyBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer"]
+[node name="CompanyBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer" unique_id=821031871]
 layout_mode = 2
 vertical = true
 
-[node name="Label" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer"]
+[node name="Label" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer" unique_id=1808888148]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("12_7b55j")
 theme_override_font_sizes/font_size = 16
 text = "Company Name"
 
-[node name="CompanyLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer"]
+[node name="CompanyLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer" unique_id=941093479]
 layout_mode = 2
-theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("4_j7ex8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5pajh")
 placeholder_text = "Your Company Name"
 
-[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer" unique_id=1784932873]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer"]
+[node name="Label2" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/CompanyBoxContainer" unique_id=24857993]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("12_7b55j")
@@ -517,42 +517,42 @@ theme_override_font_sizes/font_size = 14
 text = "0/28"
 horizontal_alignment = 2
 
-[node name="FounderBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer"]
+[node name="FounderBoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer" unique_id=227108869]
 layout_mode = 2
 vertical = true
 
-[node name="Label" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer"]
+[node name="Label" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer" unique_id=1680607581]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("12_7b55j")
 theme_override_font_sizes/font_size = 16
 text = "Founder Name"
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer" unique_id=172803952]
 layout_mode = 2
 
-[node name="FirstNameLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer/BoxContainer"]
+[node name="FirstNameLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer/BoxContainer" unique_id=1428789336]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("4_j7ex8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5pajh")
 placeholder_text = "First Name"
 
-[node name="LastNameLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer/BoxContainer"]
+[node name="LastNameLineEdit" type="LineEdit" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer/BoxContainer" unique_id=1435722799]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("4_j7ex8")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5pajh")
 placeholder_text = "Last Name"
 
-[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer" unique_id=2019522661]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer"]
+[node name="Label2" type="Label" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/NameBoxContainer/FounderBoxContainer" unique_id=1633199048]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.33, 0.33, 0.33, 1)
 theme_override_fonts/font = ExtResource("12_7b55j")
@@ -560,11 +560,11 @@ theme_override_font_sizes/font_size = 14
 text = "0/40"
 horizontal_alignment = 2
 
-[node name="LogoMarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer"]
+[node name="LogoMarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer" unique_id=983030322]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/LogoMarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/LogoMarginContainer" unique_id=371624724]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("4_j7ex8")
@@ -580,7 +580,7 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LogoButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/LogoMarginContainer/RichTextLabel"]
+[node name="LogoButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/BoxContainer/LogoMarginContainer/RichTextLabel" unique_id=1884761065]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -589,17 +589,17 @@ grow_horizontal = 2
 grow_vertical = 2
 flat = true
 
-[node name="DifficultyMarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer"]
+[node name="DifficultyMarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer" unique_id=1657673205]
 layout_mode = 2
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer" unique_id=255523054]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 50
 
-[node name="EasyButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer"]
+[node name="EasyButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer" unique_id=359290096]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_7b55j")
@@ -607,7 +607,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_8egab")
 text = "Easy"
 
-[node name="NormalButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer"]
+[node name="NormalButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer" unique_id=518995460]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_svtp6")
@@ -615,7 +615,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_8egab")
 text = "Normal"
 
-[node name="HardButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer"]
+[node name="HardButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer" unique_id=614539727]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_1acrt")
@@ -623,7 +623,7 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_8egab")
 text = "Hard"
 
-[node name="VeryHardButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer"]
+[node name="VeryHardButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/DifficultyMarginContainer/BoxContainer" unique_id=39668004]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_engjn")
@@ -631,11 +631,11 @@ toggle_mode = true
 button_group = SubResource("ButtonGroup_8egab")
 text = "V. Hard"
 
-[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=537480427]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect" unique_id=1994335970]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -647,30 +647,30 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer" unique_id=103101093]
 layout_mode = 2
 alignment = 2
 
-[node name="BackButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer"]
+[node name="BackButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer" unique_id=684592245]
 layout_mode = 2
 theme = SubResource("Theme_vr8o3")
 text = "BACK"
 
-[node name="DoneButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer"]
+[node name="DoneButton" type="Button" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer" unique_id=1535248101]
 unique_name_in_owner = true
 layout_mode = 2
 theme = SubResource("Theme_vr8o3")
 disabled = true
 text = "DONE"
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer" unique_id=2021974327]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="GameSettingsTextureButton" type="TextureButton" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/MarginContainer"]
+[node name="GameSettingsTextureButton" type="TextureButton" parent="BackgroundColorRect/NewGameMarginContainer/MarginContainer/MarginContainer/MarginContainer" unique_id=355382463]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
@@ -680,7 +680,7 @@ toggle_mode = true
 texture_normal = ExtResource("14_a8gd2")
 stretch_mode = 4
 
-[node name="SettingsMarginContainer" type="MarginContainer" parent="BackgroundColorRect"]
+[node name="SettingsMarginContainer" type="MarginContainer" parent="BackgroundColorRect" unique_id=532130872]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -691,33 +691,33 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("15_5pajh")
 
-[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer"]
+[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer" unique_id=1882507410]
 layout_mode = 2
 color = Color(0, 0, 0, 0.5)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer" unique_id=545539782]
 layout_mode = 2
 theme_override_constants/margin_left = 60
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 30
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer" unique_id=1741995787]
 layout_mode = 2
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer" unique_id=1175606799]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 vertical = true
 
-[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=1630709308]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 color = Color(0.392157, 0.709804, 0.964706, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect" unique_id=1407545158]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -726,7 +726,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 15
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer" unique_id=800612821]
 custom_minimum_size = Vector2(424, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_j7ex8")
@@ -740,11 +740,11 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=216293679]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect"]
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect" unique_id=446174716]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -752,7 +752,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer" unique_id=736532838]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -760,22 +760,22 @@ theme_override_constants/margin_left = 70
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 70
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer" unique_id=1196846536]
 layout_mode = 2
 vertical = true
 
-[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer" unique_id=163869498]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="FullscreenSettingBoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer"]
+[node name="FullscreenSettingBoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer" unique_id=857789976]
 layout_mode = 2
 vertical = true
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer" unique_id=427252889]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer" unique_id=258428084]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -783,25 +783,25 @@ theme_override_fonts/normal_font = ExtResource("12_7b55j")
 text = "Full Screen"
 scroll_active = false
 
-[node name="CenterContainer" type="CenterContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer" unique_id=1776862585]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="FullscreenSettingCheckButton" type="CheckButton" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer/CenterContainer"]
+[node name="FullscreenSettingCheckButton" type="CheckButton" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer/BoxContainer/CenterContainer" unique_id=1585160774]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_5pajh")
 
-[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer/BoxContainer/FullscreenSettingBoxContainer" unique_id=2126713849]
 layout_mode = 2
 theme_override_constants/separation = 2
 
-[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=1553999020]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect" unique_id=789458510]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -813,16 +813,16 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer" unique_id=2007519471]
 layout_mode = 2
 alignment = 2
 
-[node name="BackButton" type="Button" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer"]
+[node name="BackButton" type="Button" parent="BackgroundColorRect/SettingsMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer" unique_id=1664260923]
 layout_mode = 2
 theme = SubResource("Theme_vr8o3")
 text = "BACK"
 
-[node name="AboutMarginContainer" type="MarginContainer" parent="BackgroundColorRect"]
+[node name="AboutMarginContainer" type="MarginContainer" parent="BackgroundColorRect" unique_id=92443732]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -833,33 +833,33 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("16_5pajh")
 
-[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer"]
+[node name="BackdropColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer" unique_id=514395027]
 layout_mode = 2
 color = Color(0, 0, 0, 0.5)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer" unique_id=1420612571]
 layout_mode = 2
 theme_override_constants/margin_left = 200
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 200
 theme_override_constants/margin_bottom = 30
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer" unique_id=145330180]
 layout_mode = 2
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer" unique_id=288111118]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 vertical = true
 
-[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="HeaderColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=1502313554]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 color = Color(0.392157, 0.709804, 0.964706, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect" unique_id=1293838272]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -868,7 +868,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 15
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/HeaderColorRect/MarginContainer" unique_id=1241322877]
 custom_minimum_size = Vector2(424, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("4_j7ex8")
@@ -882,11 +882,11 @@ scroll_active = false
 autowrap_mode = 0
 vertical_alignment = 1
 
-[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="BodyColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=1956858695]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect"]
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect" unique_id=1108435367]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -894,7 +894,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer" unique_id=193301074]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -902,7 +902,7 @@ theme_override_constants/margin_left = 70
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 70
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/BodyColorRect/ScrollContainer/MarginContainer" unique_id=242584050]
 custom_minimum_size = Vector2(424, 0)
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -917,11 +917,11 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer"]
+[node name="FooterColorRect" type="ColorRect" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer" unique_id=864553318]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect" unique_id=386794736]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -933,11 +933,11 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer" unique_id=1884952548]
 layout_mode = 2
 alignment = 2
 
-[node name="BackButton" type="Button" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer"]
+[node name="BackButton" type="Button" parent="BackgroundColorRect/AboutMarginContainer/MarginContainer/MarginContainer/BoxContainer/FooterColorRect/MarginContainer/BoxContainer" unique_id=1953825371]
 layout_mode = 2
 theme = SubResource("Theme_vr8o3")
 text = "BACK"

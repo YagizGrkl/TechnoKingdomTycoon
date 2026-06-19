@@ -8,19 +8,23 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Hardware Tycoon for Godot 4"
 config/version="0"
-run/main_scene="uid://4ryxghobxo65"
+run/main_scene="uid://djpgwfhqbxfi2"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="hwtycoon"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://scripts/autoload/global.gd"
+Global="*res://scripts/global.gd"
 
 [display]
 
@@ -29,6 +33,10 @@ window/size/viewport_height=576
 window/size/initial_position_type=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="Hardware Tycoon for Godot 4"
 
 [filesystem]
 

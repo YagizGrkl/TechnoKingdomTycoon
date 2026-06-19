@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkxn51njttu01"]
+[gd_scene format=3 uid="uid://dkxn51njttu01"]
 
-[ext_resource type="Script" uid="uid://cvsh2qm5jddil" path="res://scripts/loading_screen/loading_screen.gd" id="1_ku3bi"]
+[ext_resource type="Script" uid="uid://cvsh2qm5jddil" path="res://scripts/loading_screen.gd" id="1_ku3bi"]
 [ext_resource type="FontFile" uid="uid://bqtj7evfr2o24" path="res://resources/font/lato-regular-webfont.ttf" id="2_5phy8"]
 [ext_resource type="FontFile" uid="uid://ces8cy0k1egmf" path="res://resources/font/lato-bold-webfont.ttf" id="2_hprjd"]
 [ext_resource type="Texture2D" uid="uid://c6428d1g4k4sy" path="res://resources/imported_resources/mm_cpu-sheet0.png" id="4_djmwj"]
